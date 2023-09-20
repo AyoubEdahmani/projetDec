@@ -1,0 +1,26 @@
+td{
+    font-weight: bold;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+#divTables{
+    border: 1px solid black;
+    padding-top: 10px;
+    display: none;
+}
+#tableGr{
+    display: none;
+}
+#divButton{
+    display: none;
+}
+#pliste{
+    font-weight: bold;
+    font-size: 20px;
+}
+

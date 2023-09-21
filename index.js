@@ -100,6 +100,12 @@ function formateur(nom = "") {
         <td>${e}</td>
         <td>${pos}%</td>
         `
+                 tr.addEventListener("click",function(){
+            tbodyFor.innerHTML=""
+            searchFor.value=e
+
+            formateur(e)
+        })
                 tbodyFor.append(tr)
             }
         }
@@ -139,6 +145,12 @@ function groupe(nom = "") {
         <td>${e}</td>
         <td>${pos}%</td>
         `
+                 tr.addEventListener("click",function(){
+            tbodyGr.innerHTML=""
+            searchFor.value=e
+
+            groupe(e)
+        })
                 tbodyGr.append(tr)
             }
         }

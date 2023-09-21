@@ -235,7 +235,7 @@ window.onload = function () {
             `
             elm.innerHTML += `
             <div id="headBar">
-        <img src="images/Logo_ofppt.png" alt="404">
+        <img src="Logo_ofppt.png" alt="404">
         <p>Iinstitut Specialise de Technologie Applique Berkane</p>
     </div>
     `

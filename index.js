@@ -100,7 +100,7 @@ function formateur(nom = "") {
         <td>${e}</td>
         <td>${pos}%</td>
         `
-                 tr.addEventListener("click",function(){
+        tr.addEventListener("click",function(){
             tbodyFor.innerHTML=""
             searchFor.value=e
 
@@ -145,7 +145,7 @@ function groupe(nom = "") {
         <td>${e}</td>
         <td>${pos}%</td>
         `
-                 tr.addEventListener("click",function(){
+        tr.addEventListener("click",function(){
             tbodyGr.innerHTML=""
             searchFor.value=e
 
@@ -165,11 +165,11 @@ searchFor.addEventListener("input", function () {
     groupe(this.value)
 })
 btnGr.addEventListener("click", function () {
-        searchFor.value=""
+    searchFor.value=""
     groupe(searchFor.value)
     tbodyFor.innerHTML = ""
     tableFor.style.display = "none"
-    tableGr.style.display = "block"
+    tableGr.style.display = "inline-table"
     btnGr.classList.remove("btn-secondary")
     btnGr.classList.add("btn-success")
     btnfor.classList.add("btn-secondary")
@@ -178,12 +178,12 @@ btnGr.addEventListener("click", function () {
     
 })
 btnfor.addEventListener("click", function () {
-        searchFor.value=""
+    searchFor.value=""
     formateur(searchFor.value)
     pliste.innerHTML="liste de formateur"
     tbodyGr.innerHTML = ""
     tableGr.style.display = "none"
-    tableFor.style.display = "block"
+    tableFor.style.display = "inline-table"
     btnfor.classList.remove("btn-secondary")
     btnfor.classList.add("btn-success")
     btnGr.classList.add("btn-secondary")

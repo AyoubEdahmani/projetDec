@@ -189,16 +189,66 @@ btnfor.addEventListener("click", function () {
     btnGr.classList.add("btn-secondary")
     btnGr.classList.remove("btn-success")
 })
+// pdf 
 window.onload = function () {
     document.getElementById("download")
         .addEventListener("click", () => {
+            var copyTable = divTable.cloneNode(true)
+            copyTable.id="divTableCopy"
+            var elm = document.createElement("div")
+            elm.innerHTML = `
+            <style>
+            #headBar{
+                max-width: 95%;
+                margin: 1px auto 50px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+            #headBar p{
+                width: 90%;
+                text-align: center;
+                font-size: 20px ;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+            }
+            #headBar img{
+                width: 80px;
+                height: 80px;
+            }
+ 
+          
+            #divTableCopy table{
+                border:0.1px solid black;
+                border-left:0;
+                border-right:0;
+                text-align:center
+
+            }
+            #divTableCopy tr:nth-of-type(even){
+                background:#e7e7e769;
+            }
+            #divTableCopy thead tr:nth-of-type(odd){
+                background:#d5d5d5;
+            }
+            </style>
+            `
+            elm.innerHTML += `
+            <div id="headBar">
+        <img src="images/Logo_ofppt.png" alt="404">
+        <p>Iinstitut Specialise de Technologie Applique Berkane</p>
+    </div>
+    `
+
+            elm.append(copyTable)
             var opt = {
-                margin: 1.6,
-                filename: 'myfile.pdf',
+                margin: 1,
+                filename: 'myliste.pdf',
                 image: { type: 'jpeg', quality: 1 },
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
-            html2pdf().from(divTable).set(opt).save();
+            html2pdf().from(elm).set(opt).save();
         })
 }
+//

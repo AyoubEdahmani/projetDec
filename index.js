@@ -165,6 +165,7 @@ searchFor.addEventListener("input", function () {
     groupe(this.value)
 })
 btnGr.addEventListener("click", function () {
+        searchFor.value=""
     groupe(searchFor.value)
     tbodyFor.innerHTML = ""
     tableFor.style.display = "none"
@@ -177,6 +178,7 @@ btnGr.addEventListener("click", function () {
     
 })
 btnfor.addEventListener("click", function () {
+        searchFor.value=""
     formateur(searchFor.value)
     pliste.innerHTML="liste de formateur"
     tbodyGr.innerHTML = ""

@@ -12,6 +12,7 @@ td{
     border: 1px solid black;
     padding-top: 10px;
     display: none;
+    width: 100%;
 }
 #tableGr{
     display: none;
